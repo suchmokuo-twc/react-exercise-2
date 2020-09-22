@@ -20,7 +20,7 @@ class App extends Component {
     });
   };
 
-  buildCategory = (data) => {
+  buildCategories = (data) => {
     const { state } = this;
     const { categories } = state;
 
@@ -51,7 +51,7 @@ class App extends Component {
   };
 
   componentDidMount() {
-    this.fetchData().then(this.buildCategory).catch(console.error);
+    this.fetchData().then(this.buildCategories).catch(console.error);
   }
 
   categoriesRender() {
